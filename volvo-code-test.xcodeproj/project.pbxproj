@@ -15,6 +15,8 @@
 		6AA1283D29EF24550058C67B /* volvo_code_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1283C29EF24550058C67B /* volvo_code_testUITests.swift */; };
 		6AA1283F29EF24550058C67B /* volvo_code_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1283E29EF24550058C67B /* volvo_code_testUITestsLaunchTests.swift */; };
 		6AA1284D29EF27660058C67B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1284C29EF27660058C67B /* Api.swift */; };
+		6AA1285429EF29040058C67B /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1285329EF29040058C67B /* WeatherResponse.swift */; };
+		6AA1285629EF32880058C67B /* WeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1285529EF32880058C67B /* WeatherCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		6AA1283C29EF24550058C67B /* volvo_code_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = volvo_code_testUITests.swift; sourceTree = "<group>"; };
 		6AA1283E29EF24550058C67B /* volvo_code_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = volvo_code_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6AA1284C29EF27660058C67B /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		6AA1285329EF29040058C67B /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		6AA1285529EF32880058C67B /* WeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		6AA1284E29EF27C40058C67B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6AA1285329EF29040058C67B /* WeatherResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 		6AA1284F29EF27D60058C67B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6AA1285529EF32880058C67B /* WeatherCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				6AA1284D29EF27660058C67B /* Api.swift in Sources */,
 				6AA1282429EF24540058C67B /* ContentView.swift in Sources */,
 				6AA1282229EF24540058C67B /* volvo_code_testApp.swift in Sources */,
+				6AA1285629EF32880058C67B /* WeatherCard.swift in Sources */,
+				6AA1285429EF29040058C67B /* WeatherResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

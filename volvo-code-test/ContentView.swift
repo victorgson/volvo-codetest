@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let api = Api()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        
+        ScrollView(.horizontal ,content: {
+            LazyHGrid(rows: [GridItem(.fixed(150), alignment: .center)], content: {
+                
+                ForEach(Range(1...4)) { i in
+                    WeatherCard()
+                }
+                
+            })
+        }).background(.red)
     }
 }
 
