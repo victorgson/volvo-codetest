@@ -9,18 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let api = Api()
+    let cities: [City] = [City.gothenburg, City.mountainView, City.london, City.newYork, City.berlin]
+    
     var body: some View {
-        
-        ScrollView(.horizontal ,content: {
-            LazyHGrid(rows: [GridItem(.fixed(150), alignment: .center)], content: {
-                
-                ForEach(Range(1...4)) { i in
-                    WeatherCard()
-                }
-                
-            })
-        }).background(.red)
+        NavigationView {
+            ScrollView(.horizontal, showsIndicators: false ,content: {
+                LazyHGrid(rows: [GridItem(.fixed(50))], content: {
+                    ForEach(cities, id: \.self) { city in
+                            WeatherCard(viewModel: WeatherCardViewModel(city: city))
+                    }
+                })
+            }).background(.white)
+        }
     }
 }
 

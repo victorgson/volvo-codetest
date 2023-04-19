@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A938EDC29F065BE0084F4BD /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A938EDB29F065BE0084F4BD /* WeatherDetails.swift */; };
+		6A938EDE29F07E340084F4BD /* WeatherConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A938EDD29F07E340084F4BD /* WeatherConditions.swift */; };
+		6A938EE029F089A80084F4BD /* WeatherDataForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A938EDF29F089A80084F4BD /* WeatherDataForView.swift */; };
 		6AA1282229EF24540058C67B /* volvo_code_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1282129EF24540058C67B /* volvo_code_testApp.swift */; };
 		6AA1282429EF24540058C67B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1282329EF24540058C67B /* ContentView.swift */; };
 		6AA1282629EF24550058C67B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA1282529EF24550058C67B /* Assets.xcassets */; };
@@ -17,6 +20,8 @@
 		6AA1284D29EF27660058C67B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1284C29EF27660058C67B /* Api.swift */; };
 		6AA1285429EF29040058C67B /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1285329EF29040058C67B /* WeatherResponse.swift */; };
 		6AA1285629EF32880058C67B /* WeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1285529EF32880058C67B /* WeatherCard.swift */; };
+		6AA1285829EF373E0058C67B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1285729EF373E0058C67B /* City.swift */; };
+		6AA1285A29EF38EA0058C67B /* WeatherCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1285929EF38EA0058C67B /* WeatherCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A938EDB29F065BE0084F4BD /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
+		6A938EDD29F07E340084F4BD /* WeatherConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditions.swift; sourceTree = "<group>"; };
+		6A938EDF29F089A80084F4BD /* WeatherDataForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataForView.swift; sourceTree = "<group>"; };
 		6AA1281E29EF24540058C67B /* volvo-code-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "volvo-code-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA1282129EF24540058C67B /* volvo_code_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = volvo_code_testApp.swift; sourceTree = "<group>"; };
 		6AA1282329EF24540058C67B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +58,8 @@
 		6AA1284C29EF27660058C67B /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		6AA1285329EF29040058C67B /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		6AA1285529EF32880058C67B /* WeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
+		6AA1285729EF373E0058C67B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		6AA1285929EF38EA0058C67B /* WeatherCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A938EE129F0905F0084F4BD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				6A938EDD29F07E340084F4BD /* WeatherConditions.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		6AA1281529EF24540058C67B = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +118,13 @@
 		6AA1282029EF24540058C67B /* volvo-code-test */ = {
 			isa = PBXGroup;
 			children = (
-				6AA1284B29EF27460058C67B /* Api */,
 				6AA1284E29EF27C40058C67B /* Models */,
 				6AA1284F29EF27D60058C67B /* Views */,
 				6AA1285029EF27DD0058C67B /* ViewModels */,
-				6AA1282129EF24540058C67B /* volvo_code_testApp.swift */,
+				6AA1284B29EF27460058C67B /* Api */,
+				6A938EE129F0905F0084F4BD /* Enums */,
 				6AA1282329EF24540058C67B /* ContentView.swift */,
+				6AA1282129EF24540058C67B /* volvo_code_testApp.swift */,
 				6AA1282529EF24550058C67B /* Assets.xcassets */,
 				6AA1282729EF24550058C67B /* Preview Content */,
 			);
@@ -149,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				6AA1285329EF29040058C67B /* WeatherResponse.swift */,
+				6AA1285729EF373E0058C67B /* City.swift */,
+				6A938EDF29F089A80084F4BD /* WeatherDataForView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA1285529EF32880058C67B /* WeatherCard.swift */,
+				6A938EDB29F065BE0084F4BD /* WeatherDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +186,7 @@
 		6AA1285029EF27DD0058C67B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6AA1285929EF38EA0058C67B /* WeatherCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -299,8 +322,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA1284D29EF27660058C67B /* Api.swift in Sources */,
+				6AA1285A29EF38EA0058C67B /* WeatherCardViewModel.swift in Sources */,
 				6AA1282429EF24540058C67B /* ContentView.swift in Sources */,
 				6AA1282229EF24540058C67B /* volvo_code_testApp.swift in Sources */,
+				6AA1285829EF373E0058C67B /* City.swift in Sources */,
+				6A938EDE29F07E340084F4BD /* WeatherConditions.swift in Sources */,
+				6A938EDC29F065BE0084F4BD /* WeatherDetails.swift in Sources */,
+				6A938EE029F089A80084F4BD /* WeatherDataForView.swift in Sources */,
 				6AA1285629EF32880058C67B /* WeatherCard.swift in Sources */,
 				6AA1285429EF29040058C67B /* WeatherResponse.swift in Sources */,
 			);
