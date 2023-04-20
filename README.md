@@ -1,10 +1,9 @@
-# Code Test
 
 # Tech-stack
 SwiftUI
 Combine
 
-#Architecture
+# Architecture
 MVVM
 
 # Unit Test
