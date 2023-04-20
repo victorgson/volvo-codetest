@@ -25,24 +25,27 @@ struct WeatherCard: View {
                 RoundedRectangle(cornerRadius: 10).frame(width: 300, height: 400).foregroundColor(.blue)
                 VStack {
                     if let weather = viewModel.weatherData {
-                        Image(systemName: weather.weather.first!.symbolCode.rawValue).resizable().aspectRatio(contentMode: .fit).frame(maxWidth: .infinity, maxHeight: 150).padding()
-                        Text(weather.weather[0].cityName)
+                        let weatherAt12 = weather.weather[1]
                         
-                        Text("Temperature tomorrow at \(weather.weather[0].time)")
-                        Text("\(weather.weather[0].temp) celsius")
+                        Image(systemName: weatherAt12.symbolCode.rawValue)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: .infinity, maxHeight: 150)
+                            .padding()
+                        
+                        Text(weatherAt12.cityName)
+                        Text("Temperature tomorrow at \(weatherAt12.time)")
+                        Text("\(weatherAt12.temp) celsius")
                         
                         ForEach(weather.weather, id: \.time) { weather in
                             LazyVGrid(columns: [GridItem(.fixed(100)), GridItem(.fixed(100)), GridItem(.fixed(100))]) {
-                                Text("\(weather.time) ")
-                                Image(systemName: weather.symbolCode.rawValue)
-                                Text("\(weather.temp) C")
+                                WeatherCardInterval(weather: weather)
                             }
                         }
                     }
                     else {
                         ProgressView()
                     }
-                    
                 }
             }.shadow(radius: 10)
         }.buttonStyle(.plain)

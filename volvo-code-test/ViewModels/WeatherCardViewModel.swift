@@ -9,7 +9,7 @@ import Foundation
 import Combine
 class WeatherCardViewModel: ObservableObject {
     
-    private let api: ApiProtocol
+    internal let api: ApiProtocol
     
     @Published var weatherData: WeatherDataForView?
     private let times: [String] = ["08:00", "12:00", "16:00", "20:00"]
@@ -21,12 +21,13 @@ class WeatherCardViewModel: ObservableObject {
         fetchWeather(for: city)
     }
     
-    private func fetchWeather(for city : City) {
+     func fetchWeather(for city : City) {
         api.fetchWeather(in: city).receive(on: DispatchQueue.main).sink { completion in
             switch completion {
             case .failure(let err):
                 print(err)
             case .finished:
+                print("finished")
                 break
             }
         } receiveValue: { [weak self] weather in

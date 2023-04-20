@@ -9,7 +9,7 @@ import Foundation
 
 enum WeatherCondition: String, Decodable {
      case clear = "sun.max.fill"
-     case rain = "cloud.sun.fill"
+     case rain = "cloud.rain.fill"
      case cloud = "cloud.fill"
      case snow = "cloud.drizzle.fill"
      case unknown = "questionmark"

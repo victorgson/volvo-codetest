@@ -63,22 +63,23 @@ struct Instant: Decodable {
 
 struct Next12Hours: Decodable {
     var summary: Summary
-    struct Summary: Decodable {
-        private var symbol_code: String
-        
-        var sfSymbol: WeatherCondition {
-            switch symbol_code {
-            case let str where str.contains("rain"):
-                return .rain
-            case let str where str.contains("clear") || str.contains("fair"):
-                return .clear
-            case let str where str.contains("snow"):
-                return .snow
-            case let str where str.contains("cloud"):
-                return .cloud
-            default:
-                return .unknown
-            }
+}
+
+struct Summary: Decodable {
+    var symbol_code: String
+    
+    var sfSymbol: WeatherCondition {
+        switch symbol_code {
+        case let str where str.contains("rain"):
+            return .rain
+        case let str where str.contains("clear") || str.contains("fair"):
+            return .clear
+        case let str where str.contains("snow"):
+            return .snow
+        case let str where str.contains("cloud"):
+            return .cloud
+        default:
+            return .unknown
         }
     }
 }

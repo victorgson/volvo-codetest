@@ -11,7 +11,6 @@ struct WeatherDetails: View {
     var weatherData: WeatherDataForView
     
     var body: some View {
-        
         ZStack {
             RoundedRectangle(cornerRadius: 10).frame(maxWidth: .infinity, maxHeight: 200).foregroundColor(.green).padding()
             VStack {
