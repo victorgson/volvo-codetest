@@ -22,7 +22,7 @@ struct WeatherCard: View {
         } label: {
             
             ZStack {
-                RoundedRectangle(cornerRadius: 10).frame(width: 300, height: 400).foregroundColor(.blue)
+                RoundedRectangle(cornerRadius: 10).frame(width: 300, height: 400).foregroundColor(.white)
                 VStack {
                     if let weather = viewModel.weatherData {
                         let weatherAt12 = weather.weather[1]
@@ -32,6 +32,7 @@ struct WeatherCard: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: .infinity, maxHeight: 150)
                             .padding()
+                            .foregroundColor(weatherAt12.symbolCode.foregroundColor)
                         
                         Text(weatherAt12.cityName)
                         Text("Temperature tomorrow at \(weatherAt12.time)")

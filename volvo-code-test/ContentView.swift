@@ -19,7 +19,7 @@ struct ContentView: View {
                             WeatherCard(viewModel: WeatherCardViewModel(city: city))
                     }
                 })
-            }).background(.white)
+            }).background(.blue)
         }
     }
 }
