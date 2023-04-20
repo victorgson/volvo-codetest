@@ -1,7 +1,11 @@
 
+
+
+
 # Tech-stack
-SwiftUI
-Combine
+- SwiftUI
+- Combine
+- Swift 5.8
 
 # Architecture
 MVVM
